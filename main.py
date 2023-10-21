@@ -15,6 +15,7 @@ def f1():
     for _ in range(2):
         print(f'{GREEN}{" "*40}{END}')
 
+
 # task2
 def f2():
     stroki = {
@@ -36,14 +37,22 @@ def f2():
             print(stroki[j], end="")
         print("")
 
-# plot_list = [[0 for i in range(10)] for i in range(10)]
-# result = [0 for i in range(10)]
+        
 
-# for i in range(10):
-#     result[i] = i ** 3
-
-# step = round(abs(result[0] - result[9]) / 9, 2)
-# print(step)
+#task3 y=2x+3
+def f3():
+    for y in range(-30, 31):
+        for x in range(-50, 51):
+            if (x == 0 or y == 0 or (x == -1 and y == -29) or
+                    (x == 1 and y == -29) or (x == -2 and y == -28) or (x == 2 and y == -28)
+                    or (x == 48 and y == -2) or (x == 49 and y == -1) or (x == 49 and y == 1) or
+                    (x == 48 and y == 2)):
+                print(f'{BLACK}{" "*2}{END}',end="")
+            elif y == 2*x + 3:
+                 print(f'{RED}{" "*2}{END}',end="")
+            else:
+                print(" "*2, end="")
+        print("")
 
 # for i in range(10):
 #     for j in range(10):
@@ -81,4 +90,4 @@ def f2():
 # print(list)
 
 if __name__ == "__main__":
-    f2()
+    f3()
