@@ -1,16 +1,10 @@
 #com2
+BLACK = '\u001b[48;5;16m'
 RED = '\u001b[41m'
 GREEN = '\u001b[48;5;22m'
-BLUE = '\u001b[44m'
 WHITE = '\u001b[47m'
 END = '\u001b[0m'
 sl = {0:3, 1:6, 2:8, 3:9, 4:10}
-'''for i in range(6):
-    if i < 3:
-        print(f'{BLUE}{"  " * (2 * i + 2)}{WHITE}{"  " * (14 - 2 * i)}{END}')
-    else:
-        print(f'{BLUE}{"  " * (12 - 2 * i)}{RED}{"  " * (4 + 2 * i)}{END}')
-'''
 def f1():
     for _ in range(2):
         print(f'{GREEN}{" "*40}{END}')
@@ -20,6 +14,28 @@ def f1():
         print(f'{GREEN}{" "*(17-sl[i])}{RED}{" "* sl[i]*2}{GREEN}{" "*(23 - sl[i])}{END}')
     for _ in range(2):
         print(f'{GREEN}{" "*40}{END}')
+
+# task2
+def f2():
+    stroki = {
+        0 : f'{BLACK}{" "* 20}{END}{" "*10}',
+        1  : f'{BLACK}{" "* 20}{END}{" "*10}',
+        2  : f'{BLACK}{" "* 4}{END}{" "*12}{BLACK}{" "* 4}{END}{" "* 10}',
+        3  : f'{BLACK}{" "* 4}{END}{" "*12}{BLACK}{" "* 4}{END}{" "* 10}',
+        4  : f'{BLACK}{" "* 4}{END}{" "*12}{BLACK}{" "* 4}{END}{" "* 10}',
+        5 :  f'{BLACK}{" "* 4}{END}{" "*6}{BLACK}{" "* 10}{END}{" "* 10}',
+        6 : f'{BLACK}{" "* 4}{END}{" "*6}{BLACK}{" "* 10}{END}{" "* 10}',
+        7 :  f'{BLACK}{" "* 4}{END}{" "*6}{BLACK}{" "* 4}{END}{" "* 16}',
+        8  : f'{BLACK}{" "* 4}{END}{" "*6}{BLACK}{" "* 4}{END}{" "* 16}',
+        9 :  f'{BLACK}{" "* 4}{END}{" "*6}{BLACK}{" "* 4}{END}{" "* 16}',
+        10 :  f'{BLACK}{" "* 4}{END}{" "*6}{BLACK}{" "* 20}{END}',
+    }
+    numbers = int(input("Сколько раз вывести орнамент? "))
+    for j in range(len(stroki)):
+        for i in range(numbers):
+            print(stroki[j], end="")
+        print("")
+
 # plot_list = [[0 for i in range(10)] for i in range(10)]
 # result = [0 for i in range(10)]
 
@@ -65,4 +81,4 @@ def f1():
 # print(list)
 
 if __name__ == "__main__":
-    f1()
+    f2()
