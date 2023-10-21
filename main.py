@@ -1,4 +1,4 @@
-#com1
+#com2
 RED = '\u001b[41m'
 GREEN = '\u001b[48;5;22m'
 BLUE = '\u001b[44m'
